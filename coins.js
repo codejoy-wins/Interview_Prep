@@ -62,16 +62,23 @@ function change(reg, amount){
     }
     console.log(reg.penny, "reg penny");
     console.log(amount,"amount");
+    
+    
+    var final_amount = amount.toFixed(2);
+    console.log(final_amount,"final amount");
+    amount = final_amount;
+    if (final_amount == 0.01){
+        pennies++;
+    }
     ans.push(pennies);
     ans.push("pennies");
     console.log(ans);
-    console.log(amount);
     console.log("done ------")
 }
-change(til, 13.38);  // output 20 dollars, 1 quarter, 2 dimes, 0 nickels, 2 pennies
+// change(til, 13.38);  // output 20 dollars, 1 quarter, 2 dimes, 0 nickels, 2 pennies
 
-change(til, 20.47);  // output 20 dollars, 1 quarter, 2 dimes, 0 nickels, 2 pennies
-
+// change(til, 20.47);  // output 20 dollars, 1 quarter, 2 dimes, 0 nickels, 2 pennies
+change(til, 27.46);
 
 // 20.47        (20.47)
 // -20 dollars  -(20)
